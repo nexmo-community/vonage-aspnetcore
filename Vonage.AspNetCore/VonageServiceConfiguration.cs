@@ -1,14 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Vonage;
-using Vonage.Request;
-using Vonage.Cryptography;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using Vonage.Cryptography;
+using Vonage.Request;
 
 namespace Vonage.AspNetCore
 {
+    /// <summary>
+    /// Extension class for voange service configuration;
+    /// </summary>
     public static class  VonageServiceConfiguration
     {
         /// <summary>

@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Vonage.Utility;
 
 namespace Vonage.AspNetCore
 {
-    public class WebhookMiddleware<T> where T : class
+    internal class WebhookMiddleware<T> where T : class
     {
         private readonly RequestDelegate _next;
         private readonly WebhookDelegate<T> _handler;
@@ -20,7 +18,7 @@ namespace Vonage.AspNetCore
             _invokeNext = invokeNextMiddleware;
         }
 
-        public async Task InvokeAsync(HttpContext httpContext)
+        internal async Task InvokeAsync(HttpContext httpContext)
         {
             try
             {
@@ -46,8 +44,21 @@ namespace Vonage.AspNetCore
             }
         }
     }
+
+    /// <summary>
+    /// Extension for handling generic Vonage webhooks
+    /// </summary>
     public static class VonageWebhookMiddlewareExtension
     {
+        /// <summary>
+        /// Handles generic webhooks from Vonage
+        /// </summary>
+        /// <typeparam name="T">The type of webhook you'd like to handle, e.g. <see cref="Messaging.DeliveryReceipt"/></typeparam>
+        /// <param name="builder"></param>
+        /// <param name="handler">the delegate to call back on when the webhook is parsed</param>
+        /// <param name="path">The path to handle the webhook on</param>
+        /// <param name="invokeNextMiddleware">whether to invoke the next piece of middleware in your pipeline</param>
+        /// <returns></returns>
         public static IApplicationBuilder UseWebhookRoute<T>(this IApplicationBuilder builder,
             WebhookDelegate<T> handler,
             string path,
