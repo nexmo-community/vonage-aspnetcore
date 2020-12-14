@@ -9,6 +9,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIconUrl>https://dashboard.nexmo.com/apple-touch-icon.png</PackageIconUrl>
     <Copyright>Copyright © Vonage 2020</Copyright>
   </PropertyGroup>
 
