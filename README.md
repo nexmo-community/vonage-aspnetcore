@@ -1,5 +1,7 @@
 # Vonage ASP.NET Core
 
+[![NuGet](http://img.shields.io/nuget/v/Vonage.AspNetCore.svg?style=flat-square)](https://www.nuget.org/packages/Vonage.AspNetCore/)
+
 <img src="https://developer.nexmo.com/assets/images/Vonage_Nexmo.svg" height="48px" alt="Nexmo is now known as Vonage" />
 
 The Vonage ASP.NET Core project is a middleware utility library meant to help you integrate Vonage more easily into your workflows. It provides three primary functionalities:
