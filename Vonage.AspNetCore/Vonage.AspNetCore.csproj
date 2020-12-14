@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <Description>Middleware library for handling dependency injection of the VonageClient as well as facilitating the handling of webhooks along asp.net routes</Description>
+    <PackageProjectUrl>https://github.com/nexmo-community/vonage-aspnetcore</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/nexmo-community/vonage-aspnetcore/releases/tags/v0.1.0</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright © Vonage 2020</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vonage" Version="5.5.0" />
+  </ItemGroup>
+
+</Project>
